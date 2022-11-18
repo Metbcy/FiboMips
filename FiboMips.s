@@ -5,3 +5,5 @@ fib:
     sw $s0, 8($sp) #s0 back up
 
     beq $a0, $0, ReturnZero
+    addiu $t0, $0, 0
+    
