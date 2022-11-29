@@ -140,3 +140,14 @@ $L10:
         jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
         nop
         
+        move    $16,$2
+        lw      $4,24($fp)
+        jal     fib(int)
+        nop
+        
+        move    $5,$2
+        move    $4,$16
+        jal     std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        nop
+        
+        
