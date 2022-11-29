@@ -194,4 +194,13 @@ __static_initialization_and_destruction_0(int, int):
         nop
         
         lui     $2,%hi(__dso_handle)
+        addiu   $6,$2,%lo(__dso_handle)
+        lui     $2,%hi(_ZStL8__ioinit)
+        addiu   $5,$2,%lo(_ZStL8__ioinit)
+        lui     $2,%hi(_ZNSt8ios_base4InitD1Ev)
+        addiu   $4,$2,%lo(_ZNSt8ios_base4InitD1Ev)
+        jal     __cxa_atexit
+        nop
         
+$L14:
+        nop
