@@ -187,3 +187,11 @@ __static_initialization_and_destruction_0(int, int):
         li      $2,65535                    # 0xffff
         bne     $3,$2,$L14
         nop
+        
+        lui     $2,%hi(_ZStL8__ioinit)
+        addiu   $4,$2,%lo(_ZStL8__ioinit)
+        jal     std::ios_base::Init::Init() [complete object constructor]
+        nop
+        
+        lui     $2,%hi(__dso_handle)
+        
