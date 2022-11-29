@@ -55,3 +55,9 @@ $LC2:
         .ascii  "Fibonacci Series: \000"
 $LC3:
         .ascii  " \000"
+main:
+        addiu   $sp,$sp,-48
+        sw      $31,44($sp)
+        sw      $fp,40($sp)
+        sw      $16,36($sp)
+        move    $fp,$sp
