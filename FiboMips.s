@@ -73,3 +73,9 @@ main:
         move    $5,$2
         lui     $2,%hi(_ZSt3cin)
         addiu   $4,$2,%lo(_ZSt3cin)
+        jal     std::basic_istream<char, std::char_traits<char> >::operator>>(int&)
+        nop
+        
+        lw      $2,28($fp)
+        nop
+        slt     $2,$2,25
