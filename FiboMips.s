@@ -150,4 +150,14 @@ $L10:
         jal     std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
         nop
         
-        
+        lw      $2,24($fp)
+        nop
+        addiu   $2,$2,1
+        sw      $2,24($fp)
+$L9:
+        lw      $2,28($fp)
+        lw      $3,24($fp)
+        nop
+        slt     $2,$3,$2
+        bne     $2,$0,$L10
+        nop
