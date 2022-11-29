@@ -212,3 +212,12 @@ $L14:
         nop
         
 _GLOBAL__sub_I_fib(int):
+        addiu   $sp,$sp,-32
+        sw      $31,28($sp)
+        sw      $fp,24($sp)
+        move    $fp,$sp
+        li      $5,65535                    # 0xffff
+        li      $4,1                        # 0x1
+        jal     __static_initialization_and_destruction_0(int, int)
+        nop
+        
