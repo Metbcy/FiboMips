@@ -178,3 +178,12 @@ __static_initialization_and_destruction_0(int, int):
         move    $fp,$sp
         sw      $4,32($fp)
         sw      $5,36($fp)
+        lw      $3,32($fp)
+        li      $2,1                        # 0x1
+        bne     $3,$2,$L14
+        nop
+        
+        lw      $3,36($fp)
+        li      $2,65535                    # 0xffff
+        bne     $3,$2,$L14
+        nop
