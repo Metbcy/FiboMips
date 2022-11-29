@@ -28,3 +28,14 @@ $L3:
         move    $4,$2
         jal     fib(int)
         nop
+        
+        move    $16,$2
+        lw      $2,40($fp)
+        nop
+        addiu   $2,$2,-2
+        move    $4,$2
+        jal     fib(int)
+        nop
+        
+        addu    $2,$16,$2
+        
