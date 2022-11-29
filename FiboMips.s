@@ -94,3 +94,11 @@ $L8:
         nop
         
         move    $3,$2
+        lui     $2,%hi(_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+        addiu   $5,$2,%lo(_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
+        move    $4,$3
+        jal     std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+        nop
+        
+        
+        
