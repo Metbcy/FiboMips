@@ -113,3 +113,19 @@ $L8:
         addiu   $4,$2,%lo(_ZSt3cin)
         jal     std::basic_istream<char, std::char_traits<char> >::operator>>(int&)
         nop
+        
+$L7:
+        lw      $2,28($fp)
+        nop
+        slt     $2,$2,25
+        bne     $2,$0,$L8
+        nop
+        
+$L6:
+        lui     $2,%hi($LC2)
+        addiu   $5,$2,%lo($LC2)
+        lui     $2,%hi(_ZSt4cout)
+        addiu   $4,$2,%lo(_ZSt4cout)
+        jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        nop
+        
