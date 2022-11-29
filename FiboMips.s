@@ -47,3 +47,11 @@ $L4:
         jr      $31
         nop
         
+$LC0:
+        .ascii  "Enter number of fibonacci terms: \000"
+$LC1:
+        .ascii  "This number is not valid. Try again.\000"
+$LC2:
+        .ascii  "Fibonacci Series: \000"
+$LC3:
+        .ascii  " \000"
