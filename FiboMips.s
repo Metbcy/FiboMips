@@ -161,3 +161,12 @@ $L9:
         slt     $2,$3,$2
         bne     $2,$0,$L10
         nop
+
+        move    $2,$0
+        move    $sp,$fp
+        lw      $31,44($sp)
+        lw      $fp,40($sp)
+        lw      $16,36($sp)
+        addiu   $sp,$sp,48
+        jr      $31
+        nop
