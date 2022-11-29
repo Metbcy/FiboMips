@@ -79,3 +79,12 @@ main:
         lw      $2,28($fp)
         nop
         slt     $2,$2,25
+        beq     $2,$0,$L6
+        nop
+        
+        b       $L7
+        nop
+        
+$L8:
+        lui     $2,%hi($LC1)
+        addiu   $5,$2,%lo($LC1)
