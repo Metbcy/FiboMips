@@ -13,3 +13,10 @@ fib(int):
     nop
     lw      $3,40($fp)
     li      $2,1                        # 0x1
+    bne     $3,$2,$L3
+    nop
+    
+$L2:
+    lw      $2,40($fp)
+    b       $L4
+    nop
