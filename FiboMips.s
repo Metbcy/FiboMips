@@ -129,3 +129,14 @@ $L6:
         jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
         nop
         
+        b       $L9
+        nop
+        
+$L10:
+        lui     $2,%hi($LC3)
+        addiu   $5,$2,%lo($LC3)
+        lui     $2,%hi(_ZSt4cout)
+        addiu   $4,$2,%lo(_ZSt4cout)
+        jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        nop
+        
