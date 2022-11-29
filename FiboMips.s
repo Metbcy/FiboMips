@@ -204,3 +204,11 @@ __static_initialization_and_destruction_0(int, int):
         
 $L14:
         nop
+        move    $sp,$fp
+        lw      $31,28($sp)
+        lw      $fp,24($sp)
+        addiu   $sp,$sp,32
+        jr      $31
+        nop
+        
+_GLOBAL__sub_I_fib(int):
