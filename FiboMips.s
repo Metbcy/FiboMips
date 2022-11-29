@@ -38,4 +38,12 @@ $L3:
         nop
         
         addu    $2,$16,$2
+$L4:
+        move    $sp,$fp
+        lw      $31,36($sp)
+        lw      $fp,32($sp)
+        lw      $16,28($sp)
+        addiu   $sp,$sp,40
+        jr      $31
+        nop
         
