@@ -170,3 +170,11 @@ $L9:
         addiu   $sp,$sp,48
         jr      $31
         nop
+
+__static_initialization_and_destruction_0(int, int):
+        addiu   $sp,$sp,-32
+        sw      $31,28($sp)
+        sw      $fp,24($sp)
+        move    $fp,$sp
+        sw      $4,32($fp)
+        sw      $5,36($fp)
