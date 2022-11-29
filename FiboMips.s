@@ -88,3 +88,9 @@ main:
 $L8:
         lui     $2,%hi($LC1)
         addiu   $5,$2,%lo($LC1)
+        lui     $2,%hi(_ZSt4cout)
+        addiu   $4,$2,%lo(_ZSt4cout)
+        jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        nop
+        
+        move    $3,$2
