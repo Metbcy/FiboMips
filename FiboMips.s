@@ -221,3 +221,9 @@ _GLOBAL__sub_I_fib(int):
         jal     __static_initialization_and_destruction_0(int, int)
         nop
         
+        move    $sp,$fp
+        lw      $31,28($sp)
+        lw      $fp,24($sp)
+        addiu   $sp,$sp,32
+        jr      $31
+        nop
