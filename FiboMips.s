@@ -61,3 +61,8 @@ main:
         sw      $fp,40($sp)
         sw      $16,36($sp)
         move    $fp,$sp
+        sw      $0,24($fp)
+        lui     $2,%hi($LC0)
+        addiu   $5,$2,%lo($LC0)
+        lui     $2,%hi(_ZSt4cout)
+        addiu   $4,$2,%lo(_ZSt4cout)
