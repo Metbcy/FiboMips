@@ -28,7 +28,6 @@ $L3:
         move    $4,$2
         jal     fib(int)
         nop
-        
         move    $16,$2
         lw      $2,40($fp)
         nop
@@ -36,7 +35,6 @@ $L3:
         move    $4,$2
         jal     fib(int)
         nop
-        
         addu    $2,$16,$2
 $L4:
         move    $sp,$fp
@@ -92,21 +90,18 @@ $L8:
         addiu   $4,$2,%lo(_ZSt4cout)
         jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
         nop
-        
         move    $3,$2
         lui     $2,%hi(_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
         addiu   $5,$2,%lo(_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_)
         move    $4,$3
         jal     std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
         nop
-        
         lui     $2,%hi($LC0)
         addiu   $5,$2,%lo($LC0)
         lui     $2,%hi(_ZSt4cout)
         addiu   $4,$2,%lo(_ZSt4cout)
         jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
         nop
-        
         addiu   $2,$fp,28
         move    $5,$2
         lui     $2,%hi(_ZSt3cin)
@@ -128,7 +123,6 @@ $L6:
         addiu   $4,$2,%lo(_ZSt4cout)
         jal     std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
         nop
-        
         b       $L9
         nop
         
